@@ -1,4 +1,3 @@
-/* Global page styling */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -7,7 +6,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background-color: #1d4ed8;
   color: white;
@@ -20,23 +18,20 @@ header h1 {
   font-size: 2.2rem;
 }
 
-/* Main content area */
 main {
   max-width: 900px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
-/* Card sections */
 .card {
   background: white;
   padding: 25px;
   margin-bottom: 25px;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Images */
 .hero-img {
   width: 100%;
   max-width: 500px;
@@ -45,17 +40,15 @@ main {
   border-radius: 8px;
 }
 
-/* Links */
 a {
   color: #2563eb;
 }
 
-/* Sidebar menu button */
 .menu-toggle {
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 1001;
+  z-index: 1100;
   background-color: #111827;
   color: white;
   border: none;
@@ -69,33 +62,30 @@ a {
   background-color: #1f2937;
 }
 
-/* Sidebar panel */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -260px;
-  width: 240px;
-  height: 100%;
-  background-color: #111827;
-  padding-top: 60px;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
-  transition: left 0.3s ease;
-  z-index: 1002;
-}
-
-/* Sidebar open state */
-.sidebar.open {
   left: 0;
+  width: 260px;
+  height: 100vh;
+  background-color: #111827;
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.25);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1200;
+  padding-top: 70px;
 }
 
-/* Sidebar heading */
+.sidebar.open {
+  transform: translateX(0);
+}
+
 .sidebar h2 {
   color: white;
   padding: 0 20px;
-  margin-bottom: 20px;
+  margin: 0 0 20px 0;
 }
 
-/* Sidebar links */
 .sidebar a {
   display: block;
   color: white;
@@ -108,40 +98,38 @@ a {
   background-color: #1f2937;
 }
 
-/* Close button inside sidebar */
 .close-btn {
   position: absolute;
-  top: 15px;
-  right: 15px;
+  top: 14px;
+  right: 14px;
   background: none;
   border: none;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
 }
 
-/* Dark overlay behind sidebar */
 .overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.35);
-  display: none;
-  z-index: 1000;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1150;
 }
 
-/* Show overlay when menu open */
 .overlay.show {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 20px;
   color: #6b7280;
 }
 
-/* Chart alignment */
 #barplot {
   display: flex;
   justify-content: center;
