@@ -1,34 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aidan Allajbej | Projects</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aidan Allajbej | Projects</title>
+<link rel="stylesheet" href="style.css">
+<script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>Projects</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="hobbies.html">Interests</a>
-      <a href="projects.html">Projects</a>
-    </nav>
-  </header>
 
-  <main>
-    <section class="card">
-      <h2>Interactive Bar Chart</h2>
-      <p>
-        This page includes my D3 bar chart project with tooltip interaction.
-        Hover over the bars to view the values.
-      </p>
+<button class="menu-toggle" onclick="toggleSidebar()">☰</button>
 
-      <div id="barplot"></div>
-    </section>
-  </main>
+<aside id="sidebar" class="sidebar">
+<button class="close-btn" onclick="toggleSidebar()">×</button>
+<h2>Navigation</h2>
+<a href="index.html">Home</a>
+<a href="hobbies.html">Interests</a>
+<a href="projects.html">Projects</a>
+</aside>
 
-  <script src="https://d3js.org/d3.v7.min.js"></script>
-  <script src="barplot_updated.js"></script>
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+
+<header>
+<h1>Projects</h1>
+</header>
+
+<main>
+
+<section class="card">
+
+<h2>D3 Interactive Bar Chart</h2>
+
+<p>
+This page includes a bar chart created using the D3.js data visualization
+library. The chart loads data from a CSV file and generates an SVG-based
+visualization that allows users to explore the data visually.
+</p>
+
+<p>
+I also implemented an interactive tooltip so that when a user hovers over
+a bar, the exact data value is displayed dynamically. This improves the
+readability of the chart and demonstrates basic interactive visualization
+techniques.
+</p>
+
+<div id="barplot"></div>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Aidan Allajbej</p>
+</footer>
+
+<script src="barplot_updated.js"></script>
+
+<script>
+function toggleSidebar() {
+document.getElementById("sidebar").classList.toggle("open");
+document.getElementById("overlay").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
