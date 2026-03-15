@@ -6,73 +6,62 @@
   <title>Aidan Allajbej | Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
+  <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
 
-<aside id="sidebar" class="sidebar">
-  <button class="close-btn" onclick="toggleSidebar()">×</button>
-  <h2>Navigation</h2>
-  <a href="index.html">Home</a>
-  <a href="hobbies.html">Interests</a>
-  <a href="projects.html">Projects</a>
-</aside>
+  <aside id="sidebar" class="sidebar">
+    <button class="close-btn" onclick="toggleSidebar()">×</button>
+    <h2>Navigation</h2>
+    <a href="index.html">Home</a>
+    <a href="hobbies.html">Interests</a>
+    <a href="projects.html">Projects</a>
+  </aside>
 
-<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-<header>
-  <h1>Welcome to My Website</h1>
-</header>
+  <header>
+    <h1>Welcome to My Website</h1>
+  </header>
 
-<main>
+  <main>
+    <section class="card">
+      <img src="hero-img.jpg" alt="Portrait of Aidan Allajbej" class="hero-img">
+      <h2>About Me</h2>
+      <p>
+        My name is Aidan Allajbej, and I am a student who is passionate about technology,
+        problem solving, and creative work. A large part of my academic focus is on data science,
+        programming, and learning how computers can be used to solve real problems in efficient
+        and meaningful ways. I enjoy understanding not only how code works, but also how systems,
+        websites, and software are designed to interact with people.
+      </p>
+      <p>
+        Outside of class, I spend a lot of time exploring technology and hardware.
+        I enjoy learning about computers, performance optimization, gaming peripherals,
+        and the tools that help developers build useful software. I also enjoy building
+        projects like this website because it allows me to combine creativity with
+        technical skills.
+      </p>
+    </section>
 
-<section class="card">
-  <img src="hero-img.jpg" alt="Portrait of Aidan Allajbej" class="hero-img">
+    <section class="card">
+      <h2>Contact</h2>
+      <ul>
+        <li><a href="mailto:allajbej.a@northeastern.edu">Email Me</a></li>
+        <li><a href="https://github.com/Aidan-Z-A" target="_blank">GitHub</a></li>
+      </ul>
+    </section>
+  </main>
 
-  <h2>About Me</h2>
+  <footer>
+    <p>© 2026 Aidan Allajbej</p>
+  </footer>
 
-  <p>
-    My name is Aidan Allajbej, and I am a student who is passionate about technology,
-    problem solving, and creative work. A large part of my academic focus is on data science,
-    programming, and learning how computers can be used to solve real problems in efficient
-    and meaningful ways. I enjoy understanding not only how code works, but also how systems,
-    websites, and software are designed to interact with people.
-  </p>
-
-  <p>
-    Outside of class, I spend a lot of time exploring technology and hardware.
-    I enjoy learning about computers, performance optimization, gaming peripherals,
-    and the tools that help developers build useful software. I also enjoy building
-    projects like this website because it allows me to combine creativity with
-    technical skills.
-  </p>
-
-</section>
-
-<section class="card">
-
-<h2>Contact</h2>
-
-<ul>
-<li><a href="mailto:allajbej.a@northeastern.edu">Email Me</a></li>
-<li><a href="https://github.com/Aidan-Z-A" target="_blank">GitHub</a></li>
-</ul>
-
-</section>
-
-</main>
-
-<footer>
-<p>© 2026 Aidan Allajbej</p>
-</footer>
-
-<script>
-function toggleSidebar() {
-  document.getElementById("sidebar").classList.toggle("open");
-  document.getElementById("overlay").classList.toggle("show");
-}
-</script>
-
+  <script>
+    function toggleSidebar() {
+      document.getElementById("sidebar").classList.toggle("open");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+  </script>
 </body>
 </html>
