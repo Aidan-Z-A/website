@@ -1,74 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aidan Allajbej | Home</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
 
-  <aside id="sidebar" class="sidebar">
-    <button class="close-btn" onclick="toggleSidebar()">×</button>
-    <h2>Navigation</h2>
-    <a href="index.html">Home</a>
-    <a href="hobbies.html">Interests</a>
-    <a href="projects.html">Projects</a>
-  </aside>
+<button class="menu-toggle" onclick="toggleSidebar()">☰ Menu</button>
 
-  <div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
+<aside id="sidebar" class="sidebar">
+  <button class="close-btn" onclick="toggleSidebar()">×</button>
+  <h2>Navigation</h2>
+  <a href="index.html">Home</a>
+  <a href="hobbies.html">Interests</a>
+  <a href="projects.html">Projects</a>
+</aside>
 
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
+<div id="overlay" class="overlay" onclick="toggleSidebar()"></div>
 
-  <main>
-    <section class="card">
-      <img src="hero-img.jpg" alt="Portrait of Aidan Allajbej" class="hero-img" />
-      <h2>About Me</h2>
-      <p>
-        My name is Aidan Allajbej, and I am a student who is passionate about technology,
-        problem solving, and creative work. A large part of my academic focus is on data science,
-        programming, and learning how computers can be used to solve real problems in efficient
-        and meaningful ways. I enjoy understanding not only how code works, but also how systems,
-        websites, and software are designed to interact with people. This is one reason I find web
-        development interesting. Building a website combines structure, design, and communication
-        into one project, and it gives me the opportunity to present information in a way that feels
-        personal and engaging.
-      </p>
-      <p>
-        Outside of class, I spend a lot of time exploring technology and hardware. I like learning
-        about computers, performance optimization, gaming peripherals, and how different software
-        tools can improve productivity. I am also interested in academic growth and enjoy courses
-        that challenge me to think critically and build useful projects. What I like most about this
-        field is that there is always something new to learn. Whether I am working on a coding
-        assignment, experimenting with data visualization, or trying to improve a technical skill,
-        I like the process of slowly getting better through practice. This website is a simple way
-        to introduce who I am and highlight a few of the interests that motivate me both inside and
-        outside the classroom.
-      </p>
-    </section>
+<header>
+  <h1>Welcome to My Website</h1>
+</header>
 
-    <section class="card">
-      <h2>Contact</h2>
-      <p>You can reach me here:</p>
-      <ul>
-        <li><a href="mailto:allajbej.a@northeastern.edu">Email Me</a></li>
-        <li><a href="https://github.com/Aidan-Z-A" target="_blank">GitHub</a></li>
-      </ul>
-    </section>
-  </main>
+<main>
 
-  <footer>
-    <p>© 2026 Aidan Allajbej</p>
-  </footer>
+<section class="card">
+  <img src="hero-img.jpg" alt="Portrait of Aidan Allajbej" class="hero-img">
 
-  <script>
-    function toggleSidebar() {
-      document.getElementById("sidebar").classList.toggle("open");
-      document.getElementById("overlay").classList.toggle("show");
-    }
-  </script>
+  <h2>About Me</h2>
+
+  <p>
+    My name is Aidan Allajbej, and I am a student who is passionate about technology,
+    problem solving, and creative work. A large part of my academic focus is on data science,
+    programming, and learning how computers can be used to solve real problems in efficient
+    and meaningful ways. I enjoy understanding not only how code works, but also how systems,
+    websites, and software are designed to interact with people.
+  </p>
+
+  <p>
+    Outside of class, I spend a lot of time exploring technology and hardware.
+    I enjoy learning about computers, performance optimization, gaming peripherals,
+    and the tools that help developers build useful software. I also enjoy building
+    projects like this website because it allows me to combine creativity with
+    technical skills.
+  </p>
+
+</section>
+
+<section class="card">
+
+<h2>Contact</h2>
+
+<ul>
+<li><a href="mailto:allajbej.a@northeastern.edu">Email Me</a></li>
+<li><a href="https://github.com/Aidan-Z-A" target="_blank">GitHub</a></li>
+</ul>
+
+</section>
+
+</main>
+
+<footer>
+<p>© 2026 Aidan Allajbej</p>
+</footer>
+
+<script>
+function toggleSidebar() {
+  document.getElementById("sidebar").classList.toggle("open");
+  document.getElementById("overlay").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
