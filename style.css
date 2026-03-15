@@ -1,109 +1,117 @@
-/* ---------- Global Styles ---------- */
-
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-  background-color: #f4f7fb;
-  color: #1f2937;
-  line-height: 1.6;
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+background-color: #f4f7fb;
+color: #1f2937;
+line-height: 1.6;
 }
-
-
-/* ---------- Header ---------- */
 
 header {
-  background-color: #1d4ed8;
-  color: white;
-  text-align: center;
-  padding: 30px 20px;
+background-color: #1d4ed8;
+color: white;
+text-align: center;
+padding: 30px 20px;
 }
-
-header h1 {
-  margin: 0;
-  font-size: 2.3rem;
-}
-
-
-/* ---------- Navigation ---------- */
-
-nav {
-  margin-top: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  margin: 0 15px;
-  font-size: 1rem;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-
-/* ---------- Main Layout ---------- */
 
 main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 20px;
+max-width: 900px;
+margin: 40px auto;
+padding: 0 20px;
 }
-
-
-/* ---------- Card Sections ---------- */
 
 .card {
-  background: white;
-  padding: 25px;
-  margin-bottom: 25px;
-  border-radius: 10px;
-
-  /* subtle shadow */
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+background: white;
+padding: 25px;
+margin-bottom: 25px;
+border-radius: 10px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.08);
 }
-
-
-/* ---------- Headings ---------- */
-
-h2 {
-  color: #1d4ed8;
-  margin-top: 0;
-}
-
-h3 {
-  color: #374151;
-}
-
-
-/* ---------- Images ---------- */
 
 .hero-img {
-  width: 100%;
-  max-width: 500px;
-  display: block;
-  margin: 0 auto 20px auto;
-  border-radius: 8px;
+width: 100%;
+max-width: 500px;
+display: block;
+margin: 0 auto 20px auto;
+border-radius: 8px;
 }
 
-
-/* ---------- Lists ---------- */
-
-ul {
-  padding-left: 20px;
+.menu-toggle {
+position: fixed;
+top: 20px;
+left: 20px;
+background: #111827;
+color: white;
+border: none;
+padding: 12px 16px;
+border-radius: 8px;
+cursor: pointer;
+z-index: 1001;
 }
 
-
-/* ---------- Links ---------- */
-
-a {
-  color: #2563eb;
+.sidebar {
+position: fixed;
+top: 0;
+left: -260px;
+width: 240px;
+height: 100%;
+background: #111827;
+padding-top: 60px;
+transition: left 0.3s ease;
+z-index: 1002;
 }
 
+.sidebar.open {
+left: 0;
+}
 
-/* ---------- Chart container (for your D3 project) ---------- */
+.sidebar h2 {
+color: white;
+padding: 0 20px;
+}
 
-#chart {
-  margin-top: 25px;
+.sidebar a {
+display: block;
+color: white;
+padding: 14px 20px;
+text-decoration: none;
+font-weight: bold;
+}
+
+.sidebar a:hover {
+background: #1f2937;
+}
+
+.close-btn {
+position: absolute;
+top: 15px;
+right: 15px;
+background: none;
+border: none;
+color: white;
+font-size: 1.5rem;
+cursor: pointer;
+}
+
+.overlay {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.35);
+display: none;
+z-index: 1000;
+}
+
+.overlay.show {
+display: block;
+}
+
+footer {
+text-align: center;
+padding: 20px;
+color: #6b7280;
+}
+
+#barplot {
+display: flex;
+justify-content: center;
+margin-top: 20px;
 }
